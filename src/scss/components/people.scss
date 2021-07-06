@@ -1,0 +1,51 @@
+.people{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__person{
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        flex: 0 0 14%;
+        margin-bottom: 40px;
+        a{
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 23px;
+            filter: brightness(.4);
+            transition: filter .2s linear;
+        }
+
+        &:hover{
+            img{
+                filter: brightness(1);
+            }
+        }
+    }
+
+    // MEDIA
+    @media (max-width: $laptop){
+        &__person{
+            flex-basis: 32%;
+        }
+    }
+
+    @media (max-width: $tablet){
+        &__person{
+            font-size: 16px;
+            flex: 0 0 48%;
+        }
+    }
+}
